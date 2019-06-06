@@ -3,17 +3,26 @@
   <thead>
     <tr>
       <th>Customer</th>
+      <th>Phone</th>
+      <th>Email</th>
       <th>Date</th>
       <th></th>
     </tr>
-  </thead> 
+  </thead>
   <tbody>
     <tr *ngFor="let order of orders$ | async">
       <td>{{ order.shipping.name }}</td>
-      <td>{{ order.datePlaced | date}}</td>
+      <td>{{ order.shipping.phone }}</td>
+      <td>{{ order.shipping.email }}</td>
+      <td>{{ order.datePlaced | date }}</td>
       <td>
-        <a href="#">View</a>
+        <ul class="list-group" *ngFor="let item of order.items.cartId">
+          <li class="list-group-item">{{ item.totalPrice }}</li>
+        </ul>
+      </td>
+      <td>
+        <a>View</a>
       </td>
     </tr>
-  </tbody> 
+  </tbody>
 </table>

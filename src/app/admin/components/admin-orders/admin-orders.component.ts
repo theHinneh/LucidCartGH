@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminOrdersComponent {
   orders$;
 
-  constructor(private orderService: OrderService) { 
+  constructor(private orderService: OrderService) {
     this.orders$ = orderService.getOrders();
   }
 }

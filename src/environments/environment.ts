@@ -6,11 +6,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAwxo8Bt7ZeYfFLI5WrakbNGtJsskBv3wA",
-    authDomain: "oshop-f3445.firebaseapp.com",
-    databaseURL: "https://oshop-f3445.firebaseio.com",
-    projectId: "oshop-f3445",
-    storageBucket: "oshop-f3445.appspot.com",
-    messagingSenderId: "223112932947"    
+    apiKey: 'AIzaSyDMCOASg9AnbrXJ2-Raic9d6X5hHBwSlxg',
+    authDomain: 'lucidcart-gh.firebaseapp.com',
+    databaseURL: 'https://lucidcart-gh.firebaseio.com',
+    projectId: 'lucidcart-gh',
+    storageBucket: 'lucidcart-gh.appspot.com',
+    messagingSenderId: '1072467772039',
+    appId: '1:1072467772039:web:11ebdf9c9c53b3f3'
   }
 };

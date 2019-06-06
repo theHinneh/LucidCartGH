@@ -4,8 +4,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class OrderService {
-
-  constructor(private db: AngularFireDatabase, private shoppingCartService: ShoppingCartService) { }
+  constructor(
+    private db: AngularFireDatabase,
+    private shoppingCartService: ShoppingCartService
+  ) {}
 
   async placeOrder(order) {
     let result = await this.db.list('/orders').push(order);
@@ -13,7 +15,7 @@ export class OrderService {
     return result;
   }
 
-  getOrders() { 
+  getOrders() {
     return this.db.list('/orders');
   }
 
@@ -21,7 +23,7 @@ export class OrderService {
     return this.db.list('/orders', {
       query: {
         orderByChild: 'userId',
-        equalTo: userId        
+        equalTo: userId
       }
     });
   }
