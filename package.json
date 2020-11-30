@@ -24,7 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.1",
     "angular-4-data-table": "^0.2.3",
     "angularfire2": "^4.0.0-rc.1",
-    "bootstrap": "^4.0.0-beta",
+    "bootstrap": "^4.5.3",
     "core-js": "^2.4.1",
     "firebase": "^4.2.0",
     "font-awesome": "^4.7.0",
