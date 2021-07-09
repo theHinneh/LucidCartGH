@@ -31,7 +31,8 @@
     "font-awesome": "^4.7.0",
     "ng2-validation": "^4.2.0",
     "rxjs": "^6.6.7",
-    "zone.js": "^0.8.29"
+    "zone.js": "^0.8.29",
+    "rxjs-compat": "^6.0.0-rc.0"
   },
   "devDependencies": {
     "@angular/cli": "^6.2.9",
