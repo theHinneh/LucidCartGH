@@ -1,11 +1,13 @@
+
+import {switchMap} from 'rxjs/operators';
 import { ShoppingCart } from '../../../shared/models/shopping-cart';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { ShoppingCartService } from '../../../shared/services/shopping-cart.service';
 import { Product } from '../../../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../shared/services/product.service';
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/switchMap';
+
 
 @Component({
   selector: 'app-products',
@@ -32,11 +34,11 @@ export class ProductsComponent implements OnInit  {
 
   private populateProducts() { 
     this.productService
-      .getAll()
-      .switchMap(products => {
+      .getAll().pipe(
+      switchMap(products => {
         this.products = products;
         return this.route.queryParamMap;
-      })
+      }))
       .subscribe(params => {
         this.category = params.get('category');
         this.applyFilter();      
